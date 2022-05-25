@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+Simple react dark mode component for toggling between light and darkmode on your web apps. 
+View Demo Here: https://react-lightdark-mode.netlify.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
