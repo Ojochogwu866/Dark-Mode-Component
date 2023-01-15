@@ -1,0 +1,70 @@
+:root {
+  --font-color: #000;
+  --background-color: #ccc;
+  --link-color: cornflowerblue;
+}
+
+[data-theme="dark"] {
+  --font-color: rgb(184, 230, 246);
+  --background-color: black;
+  --link-color: lightblue;
+}
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+a {
+  color: var(--link-color);
+}
+.toggle-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+.toggle-container span {
+  font-size: 17px;
+}
+.toggle-id {
+  position: relative;
+  display: inline-block;
+  height: 25px;
+  width: 50px;
+}
+.toggle-id input {
+  display: none;
+}
+.slider {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: 0.2s;
+  display: flex;
+  border-radius: 45%;
+}
+.slider::before {
+  background-color: var(--background-color);
+  bottom: 4px;
+  content: "";
+  height: 16px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 20px;
+}
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
+input:checked + .slider {
+  background-color: var(--link-color);
+}
+.slider .feature {
+  border-radius: 34px;
+}
+.slider.feature::before {
+  border-radius: 50%;
+}
